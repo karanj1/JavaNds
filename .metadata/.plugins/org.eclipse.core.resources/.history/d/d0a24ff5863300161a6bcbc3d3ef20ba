@@ -1,0 +1,18 @@
+package MyPack;
+import java.util.Scanner;
+
+
+
+public class MyAccount {
+
+	protected int acno,bal,time;
+	protected String name;
+	
+	Scanner input = new Scanner(System.in);
+	name = input.nextLine();
+	
+	public void disp(String name)
+	{
+		System.out.println("Account holder name : " + name);
+	}
+}

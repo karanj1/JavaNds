@@ -1,0 +1,29 @@
+package MyPack;
+import java.util.Scanner;
+
+
+
+public class MyAccount {
+
+	protected int acno,bal,time;
+	protected String name;
+	
+	void MyAccount{
+	Scanner input = new Scanner(System.in);
+	
+	System.out.println("Enter Account number : ");
+	acno = input.nextInt();
+	
+	System.out.println("Enter current balance : ");
+	bal = input.nextInt();
+	
+	System.out.println("Enter time period to claculate interest for : ");
+	time = input.nextInt();
+	}
+	
+	public void disp(String name)
+	{
+		System.out.println("Account holder name : " + name);
+		System.out.println("Account number : " + acno);
+	}
+}

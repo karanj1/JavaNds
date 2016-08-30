@@ -1,0 +1,31 @@
+class MyClass2
+{
+	int k;
+}
+
+public class CH51_2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub		
+		MyClass2 v1=new MyClass2();
+		v1.k = 3;
+		System.out.println("Value of v1.k before calling increment() is "+v1.k);
+		
+		modify(v1);
+		
+		System.out.println("Value of v1.k before calling increment() is "+v1.k);
+		//System.out.println(" a = " + a);
+	}
+	
+	
+	private static void disp() {
+		// TODO Auto-generated method stub
+		System.out.println(" k = " + k);
+	}
+
+	static void modify(MyClass2 temp)
+	{
+		++temp.k;
+	}
+
+}

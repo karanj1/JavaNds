@@ -1,0 +1,22 @@
+import MyPack.*;
+import MyPack.calculate.CalculateInterest;
+import java.util.Scanner;
+
+
+public class CH61 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		Scanner input = new Scanner(System.in);
+		
+		MyAccount v1 = MyAccount();
+		v1.disp(name);
+		
+		CalculateInterest v2 = CalculateInterest();
+		v2.dispReport();
+
+	}
+
+}

@@ -1,0 +1,28 @@
+package algo.insertionsort;
+
+public class insetionSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int myArray [] = insertionSortMethod(new int [] {9,8,3,13,87,15,99});
+		for (int i=0; i < myArray.length; i++){
+			System.out.println(myArray[i]);
+	}
+		
+		public static int [] insertionSortMethod(int a[]){
+			
+			for (int i=0; i < a.length-1; i++){
+				int element = a[i];
+				int j=i-1; 
+				while (j >= 0 && a[j]>element){		//in selection sort it doesnt swap numbers until inner loop is finished
+					a[j+1] = a[j];
+					j--;
+				}
+					int temp = a[i];				//swapping of numbers is done here	// numbers means a[i], a[j], a[minimum]...
+					a[i] = a[minimum];				// swaps new minimum to i position
+					a[minimum] = temp;
+			}
+			return a; 		// returns array to calling function main (myArray)
+		}
+
+}

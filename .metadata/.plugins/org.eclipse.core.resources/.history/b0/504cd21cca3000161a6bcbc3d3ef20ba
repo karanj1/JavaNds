@@ -1,0 +1,37 @@
+class MyClass2
+{
+	int k;
+	MyClass2(int k)
+	{
+		this.k=k;
+	}
+	
+}
+
+public class CH51_2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a=100;
+		
+		MyClass2 v1=new MyClass2(a);
+		disp();
+		
+		modify(v1);
+		
+		disp();
+		System.out.println(" a = " + a);
+	}
+	
+	
+	private static void disp() {
+		// TODO Auto-generated method stub
+		System.out.println(" k = " + k);
+	}
+
+	static void modify(MyClass2 temp)
+	{
+		++temp.k;
+	}
+
+}

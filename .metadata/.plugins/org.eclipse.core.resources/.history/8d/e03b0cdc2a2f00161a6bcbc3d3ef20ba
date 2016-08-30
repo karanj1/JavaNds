@@ -1,0 +1,42 @@
+//Static methods and variables 
+
+class Student {
+
+	int rno;
+	String name;
+	static String collage_name;
+	
+	static void FromStatic()
+	{
+		System.out.println(collage_name);
+		//System.out.println(i);
+	}
+}
+public class CH31 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Student.collage_name = "IIT";
+		
+		Student v1=new Student();
+		v1.rno=100;
+		v1.name= "Ramesh";
+		
+		Student v2=new Student();
+		v2.rno=200;
+		v2.name = "Suresh";  //v1.s will be equal to 500 because s is static and has static value assigned currently
+		
+		System.out.println("v1.i "+v1.i);
+		System.out.println("v1.s " + v1.s);
+		
+		System.out.println("v2.i "+v2.i);
+		System.out.println("v2.s " + v2.s);
+		
+		System.out.println(Student.collage_name); //static variable can be called using class.s() and without using object
+		
+		Student.FromStatic(); //static method can be called using class.method() and without creating object
+
+	}
+
+}

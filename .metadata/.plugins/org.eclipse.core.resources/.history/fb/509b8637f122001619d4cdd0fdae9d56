@@ -1,0 +1,14 @@
+/*
+ - Synchronized block is used to lock an object for any shared resource.
+ - Scope of synchronized block is smaller than the method.
+ */
+
+
+public class SynchronizedBlock {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

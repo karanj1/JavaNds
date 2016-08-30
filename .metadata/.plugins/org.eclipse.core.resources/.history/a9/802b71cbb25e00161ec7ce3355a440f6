@@ -1,0 +1,63 @@
+package linkedlists;
+
+public class DoublyLinkedList {
+
+	private Node first;
+	private Node last;
+		
+		public DoublyLinkedList(){
+			first = null;
+			last = null;
+		}
+		
+		public boolean isEmpty(){
+			return (first == null);
+		}
+		
+		public void insertFirst(int data){
+			Node newNode = new Node();
+			newNode.data = data;
+			
+			if(isEmpty()){
+				last = newNode;
+			}
+			newNode.next = first ; //newNode --> old first
+			first = newNode;		//new first
+		}
+		
+		public void insertLast(int data){
+			Node newNode = new Node();
+			newNode.data = data;
+			if(isEmpty()){
+				first = newNode;
+			}else {
+				last.next = newNode; // old last next --> newNode
+				last = newNode;		 //new last
+			}
+		}
+		
+		public Node deleteFirst(){
+			Node temp = first;
+			if(first.next == null){
+				last = null;
+			}
+			first = first.next;
+			return temp;
+		}
+		
+		public void displayList(){
+			System.out.println("List of Nodes (First --> Last):");
+			Node currentNode = first;
+			while(currentNode != null){
+				currentNode.displayNode();
+				currentNode = currentNode.next;
+			}
+			System.out.println();
+		}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

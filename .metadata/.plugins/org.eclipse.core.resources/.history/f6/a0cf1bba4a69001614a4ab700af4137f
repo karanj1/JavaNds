@@ -1,0 +1,101 @@
+import java.util.*;
+
+public class CollectionsExample1 
+{
+	
+	public static void main(String[] args) 
+	{		
+		ArrayList<String> indst=new ArrayList<String>(); // states
+		
+		indst.add("MH");
+		indst.add("MP");
+		indst.add("UP");
+		indst.add("GJ");
+		
+		ArrayList<String> pakst=new ArrayList<String>();
+		
+		pakst.add("pkst1");
+		pakst.add("pkst2");
+		pakst.add("pkst3");
+		pakst.add("pkst4");
+		
+		
+		HashMap <String,ArrayList<String>>hm=new HashMap<String,ArrayList<String>>();
+		hm.put("India", indst); // country , states list
+		hm.put("Pak", pakst);
+
+		System.out.println(" Key Set ");		
+		
+		Set <String>s=hm.keySet();  // all countries
+		
+		System.out.println(s);
+		
+
+		
+	Iterator<String> iterator=s.iterator(); // iterator for a set of countries
+	
+	
+	//while(iterator.hasNext())
+	for(String key : hm.keySet())
+	{
+		
+		//String cname=	iterator.next(); // country name
+	
+		ArrayList <String>stat=	hm.get(key); // search country and get arraylist of states
+
+		Iterator <String>iterator1=stat.iterator(); // iterator for states list
+
+		System.out.println("\n States of "+key);
+
+		while(iterator1.hasNext())
+		{
+	
+			System.out.println(iterator1.next());
+		
+		}
+	
+	}	
+		
+		System.out.println("\n  Values Collection ");
+		Collection<ArrayList<String>> c=	hm.values();
+		System.out.println(c);
+
+		System.out.println("\n  Entry Set ");
+		Set <Map.Entry<String,ArrayList<String>>>ss= hm.entrySet();
+
+		System.out.println(ss);
+
+		System.out.println("\n  Entry Set using enh for ");
+		for(Map.Entry<String,ArrayList<String>> me : ss)
+		{
+			System.out.println(me.getKey());
+			System.out.println(me.getValue());
+		}
+		
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("\n Enter Country name");
+		String cnm=	sc.next();
+		
+		
+		ArrayList<String> al=hm.get(cnm);
+		if(al==null)
+			System.out.println("\n Country name not found ... ");
+		else
+		{
+	
+			Iterator<String> itr=al.iterator();
+			System.out.println("\n  states of "+cnm);
+			while(itr.hasNext())
+			{
+	    	
+	    		System.out.println(itr.next());
+	    	
+			} 
+	
+		}
+		sc.close();
+		
+	}
+
+}

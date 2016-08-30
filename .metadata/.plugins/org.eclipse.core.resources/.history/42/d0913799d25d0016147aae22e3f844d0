@@ -1,0 +1,10 @@
+package linkedlists;
+
+public class singlyLinkedList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

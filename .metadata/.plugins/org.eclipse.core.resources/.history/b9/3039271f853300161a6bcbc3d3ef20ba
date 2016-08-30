@@ -1,0 +1,12 @@
+import MyPack.*;
+import MyPack.calculate.CalculateInterest;;
+
+
+public class CH61 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

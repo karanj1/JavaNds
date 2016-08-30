@@ -1,0 +1,15 @@
+package ds.queue;
+
+public class Queue {
+	
+	private int maxSize;
+	private long[] queueArray;
+	private int front;
+	private int rear;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

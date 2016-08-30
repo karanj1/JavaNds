@@ -1,0 +1,30 @@
+
+class TestMultiNaming2 extends Thread {
+	public void run() {
+		System.out.println("After sleep of 500ms " +Thread.currentThread().getName());
+		
+		try {
+			Thread.sleep(500);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+	}
+}
+
+public class currentThread {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TestMultiNaming2 t1 = new TestMultiNaming2();
+		TestMultiNaming2 t2 = new TestMultiNaming2();
+
+		t1.start();
+		
+		t2.start();
+		
+		t1.setName("Sonoo Jaiswal");  
+		  System.out.println("After changing name of t1:"+t1.getName());  
+	}
+
+}

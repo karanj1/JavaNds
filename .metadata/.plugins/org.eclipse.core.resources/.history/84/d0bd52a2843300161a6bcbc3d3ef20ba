@@ -1,0 +1,11 @@
+package MyPack.calculate;
+import MyPack.*;
+
+public class CalculateInterest extends MyAccount {
+	
+	public void dispReport()
+	{
+		int amount = bal + (bal * 0.07 * time)
+	}
+	
+}
