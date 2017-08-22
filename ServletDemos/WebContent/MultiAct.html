@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function show()
+	   {
+	   document.frm.action='ShowServlet';	//frm is n name of form
+	   document.frm.submit();
+	   }
+	    function del()
+	   {
+	     document.frm.action='DelServlet';
+	   document.frm.submit();
+	   }
+	    function other()
+	   {
+	    document.frm.action='OtherServlet';
+	   document.frm.submit();
+	   }
+	
+
+</script>
+</head>
+<body>
+  This is my HTML page. <br> <br>
+    <form name="frm">		//action is set in javascript
+     Name : <input type="text" name="name">
+    <br> <br>
+    <input type="button" value="Show" onclick="show();"> &nbsp;
+    <input type="button" value="Delete" onclick="del();">&nbsp;
+    <input type="button" value="Other" onclick="other();">
+    
+    </form>
+
+</body>
+</html>
